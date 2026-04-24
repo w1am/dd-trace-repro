@@ -1,0 +1,15 @@
+{
+  "name": "dd-trace-grpc-bug-repro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal reproduction: dd-trace-js breaks @grpc/grpc-js client-streaming / bidi calls that use the (metadata, options, callback) overload.",
+  "scripts": {
+    "bug": "node with-dd-trace.js",
+    "control": "node without-dd-trace.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.14.3",
+    "@grpc/proto-loader": "^0.7.13",
+    "dd-trace": "^5.0.0"
+  }
+}

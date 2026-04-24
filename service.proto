@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package example;
+
+service Aggregator {
+  rpc Sum(stream Number) returns (Total);
+}
+
+message Number {
+  int32 value = 1;
+}
+
+message Total {
+  int32 sum = 1;
+}
